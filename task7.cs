@@ -1,0 +1,42 @@
+﻿using System;
+
+namespace task7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine();
+            TbV1();
+            Console.WriteLine();
+            TbV2();
+            Console.ReadKey();
+        }
+
+        private static void TbV1()
+        {
+            for (var i = 1; i < 10; i++)
+            {
+                for (var j = 2; j < 6 + 1; j++)
+                {
+                    Console.Write($"{j} * {i} = {j * i}\t");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        private static void TbV2()
+        {
+            Console.WriteLine("\t2\t3\t4\t5\t6");
+            for (var i = 2; i < 9 + 1; i++)
+            {
+                Console.Write(i);
+                for (var j = 2; j < 6 + 1; j++)
+                {
+                    Console.Write($"\t{i * j}");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
