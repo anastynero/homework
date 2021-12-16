@@ -1,0 +1,25 @@
+﻿//Задан массив из n целых чисел. Замените все наибольшие его элементы на наименьший,а наименьшие элементы на наибольший.
+using System;
+
+namespace ConsoleApp10
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] nums = Array.ConvertAll(Console.ReadLine().Split(), input => int.Parse(input));
+
+            int max = nums.Max();
+            int min = nums.Min();
+
+            for (int i = 0; i < nums.Length; i++)
+                if (nums[i] == max)
+                { nums[i] = min; }
+                else if (nums[i] == min)
+                { nums[i] = max; }
+
+            foreach (var num in nums)
+                Console.Write($"{num} ");
+        }
+    }
+}
